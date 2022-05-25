@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.toDolistcontroler">
+   <children>
+      <ListView fx:id="lstList" layoutX="12.0" layoutY="8.0" prefHeight="382.0" prefWidth="233.0" />
+      <TextField fx:id="txtSelected" layoutX="258.0" layoutY="46.0" prefHeight="26.0" prefWidth="328.0" />
+      <Label fx:id="lbluser" layoutX="258.0" layoutY="14.0" prefHeight="18.0" prefWidth="216.0" text="Hi user welcome to To do list" />
+      <Button fx:id="btnDelete" layoutX="429.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnDeleteOnaction" style="-fx-background-color: red;" text="Delete" textFill="#efe9e9" />
+      <Button fx:id="btnUpdate" layoutX="522.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnUpdateOnaction" style="-fx-background-color: green;" text="Update" textFill="#fcf1f1" />
+      <Separator layoutX="251.0" layoutY="137.0" prefHeight="2.0" prefWidth="342.0" style="-fx-background-color: black;" />
+      <Pane fx:id="subroot" layoutX="258.0" layoutY="185.0" prefHeight="106.0" prefWidth="328.0" style="-fx-border-color: black;">
+         <children>
+            <TextField fx:id="txtDiscription" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="287.0" promptText="Description" />
+            <Button layoutX="214.0" layoutY="67.0" mnemonicParsing="false" onAction="#btnAddtodolistOnaction" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: green;" text="Add to list" textFill="#f2f0f0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Button layoutX="258.0" layoutY="147.0" mnemonicParsing="false" onAction="#addnewTodoOnaction" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: blue;" text="+Add new todo" textFill="#f4efef" />
+      <Button layoutX="271.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnlogoutOnaction" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: green;" text="&lt;&lt;&lt;Logout" textFill="#f7f1f1" />
+      <Label fx:id="lbluserId" layoutX="528.0" layoutY="14.0" prefHeight="18.0" prefWidth="42.0" text="User id" />
+   </children>
+</AnchorPane>
